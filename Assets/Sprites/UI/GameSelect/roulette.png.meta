@@ -129,12 +129,12 @@ TextureImporter:
       name: roulette_0
       rect:
         serializedVersion: 2
-        x: 108
-        y: 83
-        width: 573
-        height: 888
+        x: 75
+        y: 51
+        width: 640
+        height: 952
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c5d1e4571e46a474fb7b3ce90d52f8ac
     internalID: 0
     vertices: []
     indices: 
