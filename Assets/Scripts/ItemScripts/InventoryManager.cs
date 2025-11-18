@@ -1,0 +1,85 @@
+using UnityEngine;
+using System.Collections;
+using TMPro;
+using System.Collections.Generic;
+
+public class InventoryManager : MonoBehaviour
+{
+    public InventorySlot[] itemSlots;
+    public int gold;
+    public UseItem useItem;
+    public TMP_Text goldText;
+    private void Start()
+    {
+        foreach (var slot in itemSlots)
+        {
+            slot.UpdateUI();
+        }
+    }
+    private void OnEnable()
+    {
+        Loot.OnLootCollected += AddItem;
+
+    }
+    private void OnDisable()
+    {
+        Loot.OnLootCollected -= AddItem;
+
+    }
+
+    public void AddItem(ItemSO itemSO, int quantity)
+    {
+        if (itemSO.isCoin)
+        {
+            gold += quantity;
+            goldText.text = gold.ToString();
+            return;
+        }
+
+        foreach (var slot in itemSlots)
+        {
+            if (slot.itemSO == itemSO && slot.quantity < itemSO.stackSize)
+            {
+                int availableSpace = itemSO.stackSize - slot.quantity;
+                int amountToAdd = Mathf.Min(availableSpace, quantity);
+                slot.quantity += amountToAdd;
+                quantity -= amountToAdd;
+                slot.UpdateUI();
+                if (quantity <= 0)
+                {
+                    return;
+                }
+            }
+        }
+
+            foreach (var slot in itemSlots)
+            {
+                  if (slot.itemSO == null)
+                {
+                    int amountToAdd = Mathf.Min(itemSO.stackSize, quantity);
+                    slot.itemSO = itemSO;
+                    slot.quantity = quantity;
+                    slot.UpdateUI();
+                    return;
+                }
+            }
+          
+
+        }
+    
+    public void UseItem(InventorySlot slot)
+    {
+        if (slot.itemSO != null && slot.quantity >= 0)
+        {
+            useItem.AppyItemEffects(slot.itemSO);
+            slot.quantity--;
+            if (slot.quantity <= 0)
+            {
+                slot.itemSO = null;
+            }
+            slot.UpdateUI();
+        }
+    }
+
+
+}
