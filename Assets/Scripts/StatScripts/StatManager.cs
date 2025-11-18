@@ -10,6 +10,8 @@ public class StatManager : MonoBehaviour
     public int cautuion;
     public int perception;
 
+    public float mulitplier = 1.0f;
+
 
 
     private void Awake()
