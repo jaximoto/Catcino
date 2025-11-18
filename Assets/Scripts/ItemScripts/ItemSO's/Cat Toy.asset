@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38490e98e30a05441b91f6be84f1124b, type: 3}
+  m_Name: Cat Toy
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSO
+  itemName: Cat Toy
+  itemDescription: Its a cat toy
+  itemIcon: {fileID: -434675778434299504, guid: 10f3cacccb0c4c547be76836eba20664, type: 3}
+  isCoin: 0
+  stackSize: 5
+  luckBonus: 5
+  cautionBonus: 3
+  perceptionBonus: 4
+  duration: 4
