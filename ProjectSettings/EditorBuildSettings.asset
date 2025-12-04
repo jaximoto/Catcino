@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GameSelect.unity
     guid: 8763771208f0394429658e7dc6aac80a
   - enabled: 1
-    path: Assets/Scenes/Craps.unity
+    path: Assets/Scenes/Slots.unity
     guid: 4371d44fa4d07a240a3d553d08cb0da5
   - enabled: 1
     path: Assets/Scenes/Roulette.unity

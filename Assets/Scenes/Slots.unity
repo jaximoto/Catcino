@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 5370512}
   - component: {fileID: 5370511}
   m_Layer: 5
-  m_Name: LeftReel (2)
+  m_Name: RightReel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 1750709779}
   - component: {fileID: 1750709778}
   m_Layer: 5
-  m_Name: LeftReel (1)
+  m_Name: MidReel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
